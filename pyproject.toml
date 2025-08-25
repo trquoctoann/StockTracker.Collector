@@ -9,7 +9,7 @@ description = "A comprehensive stock tracking application"
 authors = [{name = "Toan Tran Quoc", email = "trquoctoan.work@gmail.com"}]
 readme = "README.md"
 license = {text = "MIT"}
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 keywords = ["stock", "tracking", "finance"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -23,12 +23,22 @@ classifiers = [
 ]
 
 dependencies = [
-    "requests>=2.31.0",
+    "aiohttp>=3.9.0",
+    "asyncio-throttle>=1.0.2",
+    "httpx>=0.25.0",
     "pandas>=2.0.0",
     "numpy>=1.24.0",
     "python-dotenv>=1.0.0",
     "pydantic>=2.0.0",
     "loguru>=0.7.0",
+    "aioredis>=2.0.0",
+    "asyncpg>=0.29.0",
+    "tenacity>=8.2.0",
+    "uvloop>=0.19.0",
+    "aiofiles>=23.0.0",
+    "psutil>=5.9.0",
+    "aio-pika>=9.4.0",
+    "aiokafka>=0.10.0"
 ]
 
 [project.optional-dependencies]
@@ -156,7 +166,7 @@ max-complexity = 10
 
 # MyPy configuration
 [tool.mypy]
-python_version = "3.9"
+python_version = "3.12"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
